@@ -1,0 +1,44 @@
+html {
+  font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+  font-family: placeholder;
+}
+
+p,
+h1 {
+  color: red;
+  background-color: aqua;
+  width: 500px;
+  border: 1px solid black;
+  font-family: sans-serif;
+}
+
+/*類選擇器*/
+li.special,
+span.special {
+  color: orange;
+}
+
+/*可指定多個類*/
+.blueberry {
+  font-size: 20px;
+}
+
+li em {
+  color: rebeccapurple;
+}
+
+h1 + p {
+  font-size: 200%;
+}
+
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+    text-decoration: none;
+}
