@@ -18,4 +18,15 @@ console.log(b.length);
 
 //Create Array 3
 var c = ["a", "b", "c"];
+console.log(c);
 console.log(c.length);
+
+//Add Array element
+c[7] = "g"
+console.log(c);
+
+c.push("d");
+console.log(c);
+
+//Delete Array element
+c.pop();
