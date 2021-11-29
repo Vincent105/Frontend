@@ -35,7 +35,8 @@ let dog = {
 //常量
 const count = 1;
 
-//何時使用 const 何時使用 let
+//何時使用 const 何時使用 let?
+
 
 function logName() {
     console.log(myName);
