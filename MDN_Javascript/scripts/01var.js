@@ -36,7 +36,8 @@ let dog = {
 const count = 1;
 
 //何時使用 const 何時使用 let?
-
+//Use const when you can, and use let when you have to.
+//This means that if you can initialize a variable when you declare it, and don't need to reassign it later, make it a constant.
 
 function logName() {
     console.log(myName);
@@ -46,3 +47,38 @@ function logName() {
 }
 
 logName();
+
+
+
+//Create Array 1
+var a = new Array();
+
+a[0] = "apple";
+a[1] = "boy";
+a[2] = "cat";
+
+console.log(a.length);
+
+//Create Array 2
+var b = [];
+
+b[0] = "a";
+b[1] = "b";
+b[2] = "c";
+
+console.log(b.length);
+
+//Create Array 3
+var c = ["a", "b", "c"];
+console.log(c);
+console.log(c.length);
+
+//Add Array element
+c[7] = "g"
+console.log(c);
+
+c.push("d");
+console.log(c);
+
+//Delete Array element
+c.pop();
