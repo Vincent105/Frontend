@@ -61,9 +61,16 @@ mylist2.insertBefore(newList2, refnode);
 //DOM節點修改 Node.replaceChild
 let mylist3 = document.getElementById('mylist');
 let oldnode = document.querySelectorAll('li')[1];
-
 let newlist3 = document.createElement('li');
 let textNode3 = document.createTextNode("New content??????");
+
 newlist3.appendChild(textNode3);
 mylist3.replaceChild(newlist3,oldnode);
+
+//DOM節點修改 Node.removeChild
+let mylist4 = document.getElementById('mylist');
+let removeNode = document.querySelectorAll('li')[2];
+
+mylist4.removeChild(removeNode);
+//mylist4.innerHTML = '';       //強制清空
 
