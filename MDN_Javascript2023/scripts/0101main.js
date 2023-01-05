@@ -33,5 +33,40 @@ let myVariable7 = 'Hello ' + 'World';
 let myVariable8 = 6 * 9;
 let myVariable9 = 3;
 //console.log(myVariable9 === 4);
-console.log(myVariable9 !== 3);
-console.log(!(myVariable9 === 3));
+//console.log(myVariable9 !== 3);
+//console.log(!(myVariable9 === 3));
+
+/*條件（Conditionals）
+ */
+let iceCream = 'chocolate';
+if (iceCream === 'chocolate') {
+    alert('Welcome');
+} else {
+    alert('Bye');
+}
+
+/*函式（Functions
+ */
+function multiply(num1, num2) {
+    let result = num1 * num2;
+    return result;
+}
+console.log('multiply(2,4)=' + multiply(2, 4));
+console.log('multiply(110,4)=' + multiply(110, 4));
+
+/*事件（Events）
+ */
+document.querySelector('ul').onclick = function () {
+    alert("don't touch me");
+}
+
+var myImage = document.querySelector('img');
+
+myImage.onclick = function () {
+    let mySrc = myImage.getAttribute('src');
+    if (mySrc === 'images/0101firefox-icon.png') {
+        myImage.setAttribute('src', 'images/0101firefox-icon2.png');
+    } else {
+        myImage.setAttribute('src', 'images/0101firefox-icon.png');
+    }
+}
