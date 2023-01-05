@@ -1,0 +1,10 @@
+<tr>
+    <td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">其他利息支出</td>
+    <td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(04)</td>
+    <td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input
+            :data-value="cardData[0].H060400.PreviousData"
+            :disabled="!unlockAllColumn &amp;&amp; !cardData[0].H060400.IsManual &amp;&amp; cardData[0].H060400.DataErrorListColumnId==-1"
+            :haserror="cardData[0].H060400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_H060400"
+            size="15" style="text-align: right;" type="text" v-model="cardData[0].H060400.FormValue" /> <span></span>
+    </td>
+</tr>

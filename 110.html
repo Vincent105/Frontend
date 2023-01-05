@@ -1,0 +1,984 @@
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border:none;width:600px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); text-align: center; width: 110px;"><strong>普 查 編 號 </strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); width: 127px; text-align: center;"><strong>鄉 ( 鎮、市、區 )</strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); width: 99px; text-align: center;"><strong>村(里)</strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); text-align: center; width: 146px;"><strong>連續編號</strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); text-align: center; width: 109px;"><strong>判定編號</strong></td>
+		</tr>
+		<tr>
+			<td style="text-align: center; width: 127px;"><span></span> <input :data-value="cardData[0].B310100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B310100.IsManual &amp;&amp; cardData[0].B310100.DataErrorListColumnId==-1" :haserror="cardData[0].B310100.DataErrorListColumnId" class="zipcode" maxlength="4" name="0_B310100" size="4" style="text-align: right;" type="text" v-model="cardData[0].B310100.FormValue" /> <span></span></td>
+			<td style="text-align: center; width: 99px;"><span></span> <input :data-value="cardData[0].B310200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B310200.IsManual &amp;&amp; cardData[0].B310200.DataErrorListColumnId==-1" :haserror="cardData[0].B310200.DataErrorListColumnId" maxlength="3" name="0_B310200" size="3" style="text-align: right;" type="text" v-model="cardData[0].B310200.FormValue" /> <span></span></td>
+			<td style="text-align: center; width: 146px;"><span></span> <input :data-value="cardData[0].B310300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B310300.IsManual &amp;&amp; cardData[0].B310300.DataErrorListColumnId==-1" :haserror="cardData[0].B310300.DataErrorListColumnId" maxlength="4" name="0_B310300" size="4" style="text-align: right;" type="text" v-model="cardData[0].B310300.FormValue" /> <span></span></td>
+			<td style="text-align: center; width: 109px;"><span></span> <input :data-value="cardData[0].B320000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B320000.IsManual &amp;&amp; cardData[0].B320000.DataErrorListColumnId==-1" :haserror="cardData[0].B320000.DataErrorListColumnId" maxlength="7" name="0_B320000" size="7" style="text-align: right;" type="text" v-model="cardData[0].B320000.FormValue" /> <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border:none;width:600px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="1" rowspan="2" style="text-align:center;"><strong>表 別 代 號 </strong></td>
+			<td rowspan="2" style="width: 72px; text-align: center;"><strong>單 位 級 別 </strong></td>
+			<td rowspan="2" style=" width: 172px;">
+			<p style="text-align: center;"><strong>營利事業暨扣繳單位統一編號</strong></p>
+
+			<p style="text-align: center;">( <input :data-value="cardData[0].B350100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B350100.IsManual &amp;&amp; cardData[0].B350100.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B350100.DataErrorListColumnId" :true-value="1" id="0_B350100" name="0_B350100" type="checkbox" v-model="cardData[0].B350100.FormValue" /> 確實無統一編號)</p>
+			</td>
+			<td colspan="2" rowspan="1" style="text-align: center;"><strong>業別代號</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="vertical-align: text-top; text-align: center;"><strong>主要</strong></td>
+			<td style="vertical-align: text-top; text-align: center;"><strong>次要</strong></td>
+		</tr>
+		<tr>
+			<td class="head" style="text-align: center;"><span></span> <input :data-value="cardData[0].B330000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B330000.IsManual &amp;&amp; cardData[0].B330000.DataErrorListColumnId==-1" :haserror="cardData[0].B330000.DataErrorListColumnId" class="textNumber" maxlength="1" name="0_B330000" size="1" style="text-align: center;" type="text" v-model="cardData[0].B330000.FormValue" /> <span></span></td>
+			<td style="vertical-align: text-top; width: 72px; text-align: center;"><span></span> <input :data-value="cardData[0].B340000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B340000.IsManual &amp;&amp; cardData[0].B340000.DataErrorListColumnId==-1" :haserror="cardData[0].B340000.DataErrorListColumnId" class="textNumber" maxlength="1" name="0_B340000" size="1" style="text-align: center;" type="text" v-model="cardData[0].B340000.FormValue" /> <span></span></td>
+			<td style="vertical-align: text-top; width: 172px; text-align: center;"><span></span> <input :data-value="cardData[0].B350000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B350000.IsManual &amp;&amp; cardData[0].B350000.DataErrorListColumnId==-1" :haserror="cardData[0].B350000.DataErrorListColumnId" class="textNumber" maxlength="8" name="0_B350000" size="8" style="text-align: right;" type="text" v-model="cardData[0].B350000.FormValue" /> <span></span></td>
+			<td style="vertical-align: text-top; text-align: center;"><span></span> <input :data-value="cardData[0].B360100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B360100.IsManual &amp;&amp; cardData[0].B360100.DataErrorListColumnId==-1" :haserror="cardData[0].B360100.DataErrorListColumnId" class="textNumber" maxlength="4" name="0_B360100" size="4" style="text-align: right;" type="text" v-model="cardData[0].B360100.FormValue" /> <span></span></td>
+			<td style="vertical-align: text-top; text-align: center;"><span></span> <input :data-value="cardData[0].B360200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B360200.IsManual &amp;&amp; cardData[0].B360200.DataErrorListColumnId==-1" :haserror="cardData[0].B360200.DataErrorListColumnId" class="textNumber" maxlength="4" name="0_B360200" size="4" style="text-align: right;" type="text" v-model="cardData[0].B360200.FormValue" /> <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<hr />
+<details data-bordered="true" data-collapse="true" data-color="" data-cssclass="" data-hidesummary="" data-maxheight="" data-monospace="true" data-wrap="" id="headerPlace" open="" style="border: 1px solid rgb(221, 221, 221);" undefined=""><summary class="pre-title" style="font-weight: bold;font-size:18px; padding: 2px 12px;">點擊切換開闔</summary>
+
+<p><label class="caption">【00】組織別： <span style="color:red">［請勾選一項］</span> </label></p>
+
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border:none;width:600px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="1" rowspan="2" style="background-color: #ffdcdc;"><strong>組織別</strong></td>
+			<td class="head" colspan="3" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>民&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;營</strong></td>
+			<td class="head" colspan="2" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>公&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;營</strong></td>
+		</tr>
+		<tr>
+			<td style="text-align:center"><input :data-value="cardData[0].B000000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B000000.IsManual &amp;&amp; cardData[0].B000000.DataErrorListColumnId==-1" :haserror="cardData[0].B000000.DataErrorListColumnId" class="textNumber" id="B000000_1" name="0_B000000" type="radio" v-model="cardData[0].B000000.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 1. 公司組織</td>
+			<td style="text-align:center"><input :data-value="cardData[0].B000000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B000000.IsManual &amp;&amp; cardData[0].B000000.DataErrorListColumnId==-1" :haserror="cardData[0].B000000.DataErrorListColumnId" class="textNumber" id="B000000_2" name="0_B000000" type="radio" v-model="cardData[0].B000000.FormValue" v-on:click="unLockFollowColumn($event)" value="2" /> 2. 獨資或合夥</td>
+			<td style="text-align:center"><input :data-value="cardData[0].B000000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B000000.IsManual &amp;&amp; cardData[0].B000000.DataErrorListColumnId==-1" :haserror="cardData[0].B000000.DataErrorListColumnId" class="textNumber" id="B000000_3" name="0_B000000" type="radio" v-model="cardData[0].B000000.FormValue" v-on:click="unLockFollowColumn($event)" value="3" /> 3. 其他組織</td>
+			<td style="text-align:center"><input :data-value="cardData[0].B000000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B000000.IsManual &amp;&amp; cardData[0].B000000.DataErrorListColumnId==-1" :haserror="cardData[0].B000000.DataErrorListColumnId" class="textNumber" id="B000000_4" name="0_B000000" type="radio" v-model="cardData[0].B000000.FormValue" v-on:click="unLockFollowColumn($event)" value="4" /> 4. 公司組織</td>
+			<td style="text-align:center"><input :data-value="cardData[0].B000000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B000000.IsManual &amp;&amp; cardData[0].B000000.DataErrorListColumnId==-1" :haserror="cardData[0].B000000.DataErrorListColumnId" class="textNumber" id="B000000_5" name="0_B000000" type="radio" v-model="cardData[0].B000000.FormValue" v-on:click="unLockFollowColumn($event)" value="5" /> 5.非公司及其他組織</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><label class="caption lockGroup">【01】實際開業年月： <span style="color:red">▲ 民國以前開業者，請填民國 1 年 1 月。</span> <span>民國</span> <span></span> <input :data-value="cardData[0].B010100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B010100.IsManual &amp;&amp; cardData[0].B010100.DataErrorListColumnId==-1" :haserror="cardData[0].B010100.DataErrorListColumnId" class="textNumber" maxlength="3" name="0_B010100" size="3" style="text-align: right;" type="text" v-model="cardData[0].B010100.FormValue" /> <span></span> <span>年</span> <span></span> <input :data-value="cardData[0].B010200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B010200.IsManual &amp;&amp; cardData[0].B010200.DataErrorListColumnId==-1" :haserror="cardData[0].B010200.DataErrorListColumnId" class="textNumber" maxlength="2" name="0_B010200" size="2" style="text-align: right;" type="text" v-model="cardData[0].B010200.FormValue" /> <span></span> <span>月</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label></p>
+
+<p><label class="caption">【03-1】</label> <label class="caption lockGroup">110年僱用員工及薪資</label> <label class="caption">：</label></p>
+
+<p>&nbsp; &nbsp; &nbsp; 1. <span style="color:red;">年底</span> 僱用人數</p>
+
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border: none; width: 572px;">
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 153px; text-align: center;"><strong>項&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;目 </strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); width: 119px; text-align: center;"><strong>人&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 數</strong></td>
+			<td class="head" style="background-color: rgb(255, 220, 220); width: 286px; text-align: center;"><b>其中，有無部分工時員工</b></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); width: 57px; text-align: center;"><b>職</b> <strong>&nbsp; &nbsp;</strong> <b>員</b></td>
+			<td class="head" colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 96px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp;男&nbsp; (1)</strong></td>
+			<td colspan="1" rowspan="1" style="width: 119px; text-align: center;"><span></span> <input :data-value="cardData[0].B030111.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030111.IsManual &amp;&amp; cardData[0].B030111.DataErrorListColumnId==-1" :haserror="cardData[0].B030111.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030111" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030111.FormValue" /> <span></span></td>
+			<td colspan="1" rowspan="4" style="width: 286px; text-align: center;">
+			<div>
+			<p style="text-align: left;"><input :data-value="cardData[0].B030116.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030116.IsManual &amp;&amp; cardData[0].B030116.DataErrorListColumnId==-1" :haserror="cardData[0].B030116.DataErrorListColumnId" class="textNumber" id="B030116_1" name="0_B030116" type="radio" v-model="cardData[0].B030116.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> A.有， <input :data-value="cardData[0].B030117.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030117.IsManual &amp;&amp; cardData[0].B030117.DataErrorListColumnId==-1" :haserror="cardData[0].B030117.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030117" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030117.FormValue" /> 人； <span style="color:red;">(不含外包人力)</span></p>
+			</div>
+
+			<div>
+			<p style="text-align: left;"><input :data-value="cardData[0].B030116.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030116.IsManual &amp;&amp; cardData[0].B030116.DataErrorListColumnId==-1" :haserror="cardData[0].B030116.DataErrorListColumnId" class="textNumber" id="B030116_2" name="0_B030116" type="radio" v-model="cardData[0].B030116.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;B.無，未僱用部分工時員工。</p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="head" colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 96px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp;女&nbsp; (2) </strong></td>
+			<td colspan="1" rowspan="1" style="width: 119px; text-align: center;"><span></span> <input :data-value="cardData[0].B030112.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030112.IsManual &amp;&amp; cardData[0].B030112.DataErrorListColumnId==-1" :haserror="cardData[0].B030112.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030112" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030112.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); width: 57px; text-align: center;"><strong>工&nbsp; &nbsp; 員</strong></td>
+			<td class="head" colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 96px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp;男&nbsp; (3) </strong></td>
+			<td style="width: 119px; text-align: center;"><span></span> <input :data-value="cardData[0].B030113.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030113.IsManual &amp;&amp; cardData[0].B030113.DataErrorListColumnId==-1" :haserror="cardData[0].B030113.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030113" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030113.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td class="head" colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 96px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp;女&nbsp; (4) </strong></td>
+			<td style="width: 119px; text-align: center;"><span></span> <input :data-value="cardData[0].B030114.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030114.IsManual &amp;&amp; cardData[0].B030114.DataErrorListColumnId==-1" :haserror="cardData[0].B030114.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030114" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030114.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td class="head" colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 153px;"><strong>&nbsp;合&nbsp; &nbsp;計 [(1)~(4)] (5)</strong></td>
+			<td style="width: 119px; text-align: center;"><span></span> <input :data-value="cardData[0].B030115.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030115.IsManual &amp;&amp; cardData[0].B030115.DataErrorListColumnId==-1" :haserror="cardData[0].B030115.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030115" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030115.FormValue" /> <span></span></td>
+			<td style="width: 286px;">2. <span style="color:red;">全年</span> 薪資總額 <input :data-value="cardData[0].B030120.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030120.IsManual &amp;&amp; cardData[0].B030120.DataErrorListColumnId==-1" :haserror="cardData[0].B030120.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B030120" size="15" style="text-align: right;" type="text" v-model="cardData[0].B030120.FormValue" /> 元。 <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【03-2】110年實際參與營運但未固定支薪之雇主、自營作業者及無酬家屬工作者</label> <label class="caption">：</label></p>
+
+<div class="lockGroup" style="width:400px;">&nbsp; &nbsp; &nbsp; 1. 年底之男性 <input :data-value="cardData[0].B030201.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030201.IsManual &amp;&amp; cardData[0].B030201.DataErrorListColumnId==-1" :haserror="cardData[0].B030201.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030201" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030201.FormValue" /> 人、女性 <input :data-value="cardData[0].B030202.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030202.IsManual &amp;&amp; cardData[0].B030202.DataErrorListColumnId==-1" :haserror="cardData[0].B030202.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030202" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030202.FormValue" /> 人。</div>
+
+<div class="lockGroup" style="width:550px;">&nbsp; &nbsp; &nbsp; 2. <span style="color:red;">獨資或合夥組織</span> 請設算前項1.人員之全年薪資總額 <input :data-value="cardData[0].B030203.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030203.IsManual &amp;&amp; cardData[0].B030203.DataErrorListColumnId==-1" :haserror="cardData[0].B030203.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B030203" size="15" style="text-align: right;" type="text" v-model="cardData[0].B030203.FormValue" /> 元。</div>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【03-3】110年全年有無使用派遣人力： <span style="color:red;">(不含外包業務之人力)</span> </label></p>
+
+<div class="lockGroup" style="width:740px;">&nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B030310.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030310.IsManual &amp;&amp; cardData[0].B030310.DataErrorListColumnId==-1" :haserror="cardData[0].B030310.DataErrorListColumnId" class="textNumber" id="B030310_1" name="0_B030310" type="radio" v-model="cardData[0].B030310.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有，使用&nbsp; <input :data-value="cardData[0].B030311.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030311.IsManual &amp;&amp; cardData[0].B030311.DataErrorListColumnId==-1" :haserror="cardData[0].B030311.DataErrorListColumnId" class="textNumber" maxlength="2" name="0_B030311" size="2" style="text-align: right;" type="text" v-model="cardData[0].B030311.FormValue" /> 個月，有使用月份中，通常使用&nbsp; <input :data-value="cardData[0].B030312.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030312.IsManual &amp;&amp; cardData[0].B030312.DataErrorListColumnId==-1" :haserror="cardData[0].B030312.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030312" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030312.FormValue" /> 人，最多使用&nbsp; <input :data-value="cardData[0].B030313.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030313.IsManual &amp;&amp; cardData[0].B030313.DataErrorListColumnId==-1" :haserror="cardData[0].B030313.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030313" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030313.FormValue" /> 人；<input :data-value="cardData[0].B030310.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030310.IsManual &amp;&amp; cardData[0].B030310.DataErrorListColumnId==-1" :haserror="cardData[0].B030310.DataErrorListColumnId" class="textNumber" id="B030310_2" name="0_B030310" type="radio" v-model="cardData[0].B030310.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【03-4】110年全年有無經營勞動派遣業務</label> <label class="caption">：</label></p>
+
+<div class="lockGroup" style="width:740px;">&nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B030410.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030410.IsManual &amp;&amp; cardData[0].B030410.DataErrorListColumnId==-1" :haserror="cardData[0].B030410.DataErrorListColumnId" class="textNumber" id="B030410_1" name="0_B030410" type="radio" v-model="cardData[0].B030410.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有，派遣&nbsp; <input :data-value="cardData[0].B030411.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030411.IsManual &amp;&amp; cardData[0].B030411.DataErrorListColumnId==-1" :haserror="cardData[0].B030411.DataErrorListColumnId" class="textNumber" maxlength="2" name="0_B030411" size="2" style="text-align: right;" type="text" v-model="cardData[0].B030411.FormValue" /> 個月，有派遣月份中，通常派遣&nbsp; <input :data-value="cardData[0].B030412.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030412.IsManual &amp;&amp; cardData[0].B030412.DataErrorListColumnId==-1" :haserror="cardData[0].B030412.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030412" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030412.FormValue" /> 人，最多派遣&nbsp; <input :data-value="cardData[0].B030413.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030413.IsManual &amp;&amp; cardData[0].B030413.DataErrorListColumnId==-1" :haserror="cardData[0].B030413.DataErrorListColumnId" class="textNumber" maxlength="7" name="0_B030413" size="7" style="text-align: right;" type="text" v-model="cardData[0].B030413.FormValue" /> 人；<input :data-value="cardData[0].B030410.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B030410.IsManual &amp;&amp; cardData[0].B030410.DataErrorListColumnId==-1" :haserror="cardData[0].B030410.DataErrorListColumnId" class="textNumber" id="B030410_2" name="0_B030410" type="radio" v-model="cardData[0].B030410.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【04-1】110年底資產狀況</label> <label class="caption">：</label></p>
+
+<table border="1" cellspacing="0" padding="0" style="border-collapse: collapse; border: none; width: 635px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="3" rowspan="1" style="background-color: rgb(255, 220, 220); width: 444px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;目</strong></td>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 234px; text-align: center;"><strong>金額(元)</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="5" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">流動資產</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">存料<span style="color:red;">(不含在建工程)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(01)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040101.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040101.IsManual &amp;&amp; cardData[0].B040101.DataErrorListColumnId==-1" :haserror="cardData[0].B040101.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040101" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040101.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">各項流動性國外金融商品</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(02)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040102.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040102.IsManual &amp;&amp; cardData[0].B040102.DataErrorListColumnId==-1" :haserror="cardData[0].B040102.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040102" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040102.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">現金及其他流動資產</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(03)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040103.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040103.IsManual &amp;&amp; cardData[0].B040103.DataErrorListColumnId==-1" :haserror="cardData[0].B040103.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040103" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040103.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">建築用地<span style="color:red;">(含在建土地)</span></td>
+			<td style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(04)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><input :data-value="cardData[0].B040104.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040104.IsManual &amp;&amp; cardData[0].B040104.DataErrorListColumnId==-1" :haserror="cardData[0].B040104.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040104" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040104.FormValue" /></td>
+		</tr>
+		<tr>
+			<td colspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">在建工程及待售房屋<span style="color:red;">(應扣除預收工程款)</span></td>
+			<td style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(05)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><input :data-value="cardData[0].B040105.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040105.IsManual &amp;&amp; cardData[0].B040105.DataErrorListColumnId==-1" :haserror="cardData[0].B040105.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040105" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040105.FormValue" /></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="5" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">固定資產</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">土地<span style="color:red;">(不含建築用地)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(06)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040106.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040106.IsManual &amp;&amp; cardData[0].B040106.DataErrorListColumnId==-1" :haserror="cardData[0].B040106.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040106" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040106.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">房屋及建築淨額<span style="color:red;">(不含自地自建及合建待售房屋)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(07)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040107.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040107.IsManual &amp;&amp; cardData[0].B040107.DataErrorListColumnId==-1" :haserror="cardData[0].B040107.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040107" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040107.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">運輸設備淨額</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(08)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040108.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040108.IsManual &amp;&amp; cardData[0].B040108.DataErrorListColumnId==-1" :haserror="cardData[0].B040108.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040108" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040108.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">機械及什項設備淨額 <span style="color:red;">(含生財器具)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(09)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040109.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040109.IsManual &amp;&amp; cardData[0].B040109.DataErrorListColumnId==-1" :haserror="cardData[0].B040109.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040109" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040109.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">未完工程及待驗設備 <span style="color:red;">(含預付設備款)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(10)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040110.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040110.IsManual &amp;&amp; cardData[0].B040110.DataErrorListColumnId==-1" :haserror="cardData[0].B040110.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040110" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040110.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">使用權資產</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">
+			<p>使用權資產淨額</p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">租賃期滿可取得所有權或</p>
+
+						<p style="text-align: center;">具優先承購權部分</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">
+			<p>(11)</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;">
+			<p><span></span> <input :data-value="cardData[0].B040111.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040111.IsManual &amp;&amp; cardData[0].B040111.DataErrorListColumnId==-1" :haserror="cardData[0].B040111.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040111" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040111.FormValue" /> <span></span></p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">(21)占 <span></span> <input :data-value="cardData[0].B040121.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040121.IsManual &amp;&amp; cardData[0].B040121.DataErrorListColumnId==-1" :haserror="cardData[0].B040121.DataErrorListColumnId" maxlength="3" name="0_B040121" size="3" style="text-align: right;" type="text" v-model="cardData[0].B040121.FormValue" /> <span></span> ％</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 351px;">投資性不動產 <span style="color:red;">(含出租借固定資產)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(13)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040113.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040113.IsManual &amp;&amp; cardData[0].B040113.DataErrorListColumnId==-1" :haserror="cardData[0].B040113.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040113" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040113.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">長期投資</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">國內</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(14)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040114.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040114.IsManual &amp;&amp; cardData[0].B040114.DataErrorListColumnId==-1" :haserror="cardData[0].B040114.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040114" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040114.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">國外</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(15)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040115.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040115.IsManual &amp;&amp; cardData[0].B040115.DataErrorListColumnId==-1" :haserror="cardData[0].B040115.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040115" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040115.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="3" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">無形資產淨額</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">專利權</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(16)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040116.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040116.IsManual &amp;&amp; cardData[0].B040116.DataErrorListColumnId==-1" :haserror="cardData[0].B040116.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040116" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040116.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">電腦軟體</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(17)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040117.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040117.IsManual &amp;&amp; cardData[0].B040117.DataErrorListColumnId==-1" :haserror="cardData[0].B040117.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040117" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040117.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">其他</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(18)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040118.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040118.IsManual &amp;&amp; cardData[0].B040118.DataErrorListColumnId==-1" :haserror="cardData[0].B040118.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040118" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040118.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 351px; text-align: center;">其他資產</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(19)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040119.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040119.IsManual &amp;&amp; cardData[0].B040119.DataErrorListColumnId==-1" :haserror="cardData[0].B040119.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040119" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040119.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 351px; text-align: center;"><b>資產總計(淨額)[(1)~(19)]</b></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(20)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B040120.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040120.IsManual &amp;&amp; cardData[0].B040120.DataErrorListColumnId==-1" :haserror="cardData[0].B040120.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040120" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040120.FormValue" /> <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><label class="caption ">【04-2】110年底租用或借用固定資產按市價估算金額：</label> <span class="lockGroup" style="width:200px;"> <input :data-value="cardData[0].B040200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040200.IsManual &amp;&amp; cardData[0].B040200.DataErrorListColumnId==-1" :haserror="cardData[0].B040200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040200.FormValue" /> 元。&nbsp;</span></p>
+
+<p><label class="caption">【04-3】110年全年自有固定資產變動：</label></p>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp;增加 <input :data-value="cardData[0].B040301.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040301.IsManual &amp;&amp; cardData[0].B040301.DataErrorListColumnId==-1" :haserror="cardData[0].B040301.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040301" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040301.FormValue" /> 元、報廢 <input :data-value="cardData[0].B040302.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040302.IsManual &amp;&amp; cardData[0].B040302.DataErrorListColumnId==-1" :haserror="cardData[0].B040302.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040302" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040302.FormValue" /> 元及出售 <input :data-value="cardData[0].B040303.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040303.IsManual &amp;&amp; cardData[0].B040303.DataErrorListColumnId==-1" :haserror="cardData[0].B040303.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040303" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040303.FormValue" /> 元。</div>
+</details>
+
+<p>&nbsp;</p>
+
+<p><label class="caption ">【04-4】110年初存料：</label> <span class="lockGroup" style="width:200px;"> <input :data-value="cardData[0].B040400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B040400.IsManual &amp;&amp; cardData[0].B040400.DataErrorListColumnId==-1" :haserror="cardData[0].B040400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B040400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B040400.FormValue" /> 元。&nbsp;</span></p>
+
+<p><label class="caption">【05】110年全年各項收入：</label></p>
+
+<table border="1" cellspacing="0" padding="0" style="border-collapse: collapse; border: none; width: 635px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="3" rowspan="1" style="background-color: rgb(255, 220, 220); width: 444px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;目</strong></td>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 234px; text-align: center;"><strong>金額(元)</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="6" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">營業收入</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">
+			<p>承包工程收入</p>
+
+			<p><span style="color:red;">(含發包工程部分及向同業分包收入部分)</span></p>
+			</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(01)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B050100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B050100.IsManual &amp;&amp; cardData[0].B050100.DataErrorListColumnId==-1" :haserror="cardData[0].B050100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B050100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B050100.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">修理裝配收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(02)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B050200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B050200.IsManual &amp;&amp; cardData[0].B050200.DataErrorListColumnId==-1" :haserror="cardData[0].B050200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B050200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B050200.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">出售自地自建或合建房地產收入<span style="color:red;">(含土地價值)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">
+			<p>(03)</p>
+			</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;">
+			<p><span></span> <input :data-value="cardData[0].B050300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B050300.IsManual &amp;&amp; cardData[0].B050300.DataErrorListColumnId==-1" :haserror="cardData[0].B050300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B050300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B050300.FormValue" /><span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">出售貨品及材料收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(04)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B050400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B050400.IsManual &amp;&amp; cardData[0].B050400.DataErrorListColumnId==-1" :haserror="cardData[0].B050400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B050400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B050400.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">其他營業收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(11)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051100.IsManual &amp;&amp; cardData[0].B051100.DataErrorListColumnId==-1" :haserror="cardData[0].B051100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051100.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">
+			<p><strong>營業收入小計[(01)~(11)]</strong></p>
+			</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">
+			<p>(12)</p>
+			</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;">
+			<p><span></span> <input :data-value="cardData[0].B051200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051200.IsManual &amp;&amp; cardData[0].B051200.DataErrorListColumnId==-1" :haserror="cardData[0].B051200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051200.FormValue" /> <span></span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="6" style="background-color: rgb(255, 220, 220); width: 103px; text-align: center;">營業外收入</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">租金收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(13)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051300.IsManual &amp;&amp; cardData[0].B051300.DataErrorListColumnId==-1" :haserror="cardData[0].B051300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051300.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">利息收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(14)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051400.IsManual &amp;&amp; cardData[0].B051400.DataErrorListColumnId==-1" :haserror="cardData[0].B051400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051400.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">投資收益及出售資產利益</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(15)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051500.IsManual &amp;&amp; cardData[0].B051500.DataErrorListColumnId==-1" :haserror="cardData[0].B051500.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051500" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051500.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">政府補助收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(16)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051600.IsManual &amp;&amp; cardData[0].B051600.DataErrorListColumnId==-1" :haserror="cardData[0].B051600.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051600" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051600.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;">其他營業外收入</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(17)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051700.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051700.IsManual &amp;&amp; cardData[0].B051700.DataErrorListColumnId==-1" :haserror="cardData[0].B051700.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051700" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051700.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 250px;"><strong>營業外收入小計[(13)~(17)]</strong></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(18)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051800.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051800.IsManual &amp;&amp; cardData[0].B051800.DataErrorListColumnId==-1" :haserror="cardData[0].B051800.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051800" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051800.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 351px; text-align: center;"><strong>各項收入合計[(12)+(18)]</strong></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 73px; text-align: center;">(19)</td>
+			<td class="lockGroup" style="width: 189px; text-align: center;"><span></span> <input :data-value="cardData[0].B051900.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B051900.IsManual &amp;&amp; cardData[0].B051900.DataErrorListColumnId==-1" :haserror="cardData[0].B051900.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B051900" size="15" style="text-align: right;" type="text" v-model="cardData[0].B051900.FormValue" /> <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【06】110年全年各項成本費用支出：</label></p>
+
+<table border="1" cellspacing="0" padding="0" style="border-collapse: collapse; border: none; width: 791px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="3" rowspan="1" style="background-color: rgb(255, 220, 220); width: 574px;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 目</strong></td>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 215px; text-align: center;"><strong>金額(元)</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="18" style="background-color: rgb(255, 220, 220); width: 92px; text-align: center;">
+			<p>營業支出</p>
+
+			<p><span style="color:red;">(各細項請按</span></p>
+
+			<p><span style="color:red;">營業成本及</span></p>
+
+			<p><span style="color:red;">營業費用之</span></p>
+
+			<p><span style="color:red;">相關科目</span></p>
+
+			<p><span style="color:red;">加總填入)</span></p>
+			</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">營建材料耗用價值<span style="color:red;">(不含業主或同業提供的材料價值)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(01)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060100.IsManual &amp;&amp; cardData[0].B060100.DataErrorListColumnId==-1" :haserror="cardData[0].B060100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060100.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">發包工程款<span style="color:red;">(不含貴企業提供的材料價值)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(02)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060200.IsManual &amp;&amp; cardData[0].B060200.DataErrorListColumnId==-1" :haserror="cardData[0].B060200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060200.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">年初自地自建或合建房務之在建工程及待售房屋成本<span style="color:red;">(不含土地成本)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(03)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060300.IsManual &amp;&amp; cardData[0].B060300.DataErrorListColumnId==-1" :haserror="cardData[0].B060300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060300.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;"><span style="color:red;">(減)</span>年底自地自建或合建房屋之在建工程及待售房屋成本<span style="color:red;">(不含土地成本)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(04)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;"><span></span> <span style="color:red;">(-)</span><input :data-value="cardData[0].B060400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060400.IsManual &amp;&amp; cardData[0].B060400.DataErrorListColumnId==-1" :haserror="cardData[0].B060400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060400.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">出售房地產土地成本</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(05)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060500.IsManual &amp;&amp; cardData[0].B060500.DataErrorListColumnId==-1" :haserror="cardData[0].B060500.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060500" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060500.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">出售貨品及材料成本</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(06)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060600.IsManual &amp;&amp; cardData[0].B060600.DataErrorListColumnId==-1" :haserror="cardData[0].B060600.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060600" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060600.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">水電瓦斯費</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(07)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060700.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060700.IsManual &amp;&amp; cardData[0].B060700.DataErrorListColumnId==-1" :haserror="cardData[0].B060700.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060700" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060700.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">營造機具耗用油料費</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(08)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060800.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060800.IsManual &amp;&amp; cardData[0].B060800.DataErrorListColumnId==-1" :haserror="cardData[0].B060800.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060800" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060800.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">營造機具租用費</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(09)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B060900.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B060900.IsManual &amp;&amp; cardData[0].B060900.DataErrorListColumnId==-1" :haserror="cardData[0].B060900.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B060900" size="15" style="text-align: right;" type="text" v-model="cardData[0].B060900.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">工地其他成本</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(10)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061000.IsManual &amp;&amp; cardData[0].B061000.DataErrorListColumnId==-1" :haserror="cardData[0].B061000.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061000" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061000.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">薪資、退休及撫卹金、資遣費、福利支出<span style="color:red;">(含直接及間接人工成本)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(11)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061100.IsManual &amp;&amp; cardData[0].B061100.DataErrorListColumnId==-1" :haserror="cardData[0].B061100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061100.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">租金支出</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(12)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061200.IsManual &amp;&amp; cardData[0].B061200.DataErrorListColumnId==-1" :haserror="cardData[0].B061200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061200.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">稅捐及規費<span style="color:red;">(不含所得稅及進口稅捐)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(13)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061300.IsManual &amp;&amp; cardData[0].B061300.DataErrorListColumnId==-1" :haserror="cardData[0].B061300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061300.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">自有固定資產折舊</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(14)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061400.IsManual &amp;&amp; cardData[0].B061400.DataErrorListColumnId==-1" :haserror="cardData[0].B061400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061400.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">
+			<p>使用權資產折舊</p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">租賃期滿可取得所有權或具優先承購權部分</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;"><span style="color:red;">其中非屬</span>租賃期滿可取得所有權或具優先承購權之<span style="color:red;">營造機具折舊</span>約</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">
+			<p>(15)</p>
+			</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">
+			<p>&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061500.IsManual &amp;&amp; cardData[0].B061500.DataErrorListColumnId==-1" :haserror="cardData[0].B061500.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061500" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061500.FormValue" /> <span></span></p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">(25)占 <span></span> <input :data-value="cardData[0].B062500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062500.IsManual &amp;&amp; cardData[0].B062500.DataErrorListColumnId==-1" :haserror="cardData[0].B062500.DataErrorListColumnId" maxlength="3" name="0_B062500" size="3" style="text-align: right;" type="text" v-model="cardData[0].B062500.FormValue" /> <span></span> ％</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">(27)占 <span></span> <input :data-value="cardData[0].B062700.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062700.IsManual &amp;&amp; cardData[0].B062700.DataErrorListColumnId==-1" :haserror="cardData[0].B062700.DataErrorListColumnId" maxlength="3" name="0_B062700" size="3" style="text-align: right;" type="text" v-model="cardData[0].B062700.FormValue" /> <span></span> ％</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">呆帳損失及移轉支出<span style="color:red;">(含捐贈)</span></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(16)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061600.IsManual &amp;&amp; cardData[0].B061600.DataErrorListColumnId==-1" :haserror="cardData[0].B061600.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061600" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061600.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">其他營業費用</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(17)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061700.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061700.IsManual &amp;&amp; cardData[0].B061700.DataErrorListColumnId==-1" :haserror="cardData[0].B061700.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061700" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061700.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;"><strong>營業支出小計[(1)~(17)]</strong></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(18)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061800.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061800.IsManual &amp;&amp; cardData[0].B061800.DataErrorListColumnId==-1" :haserror="cardData[0].B061800.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061800" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061800.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="4" style="background-color: rgb(255, 220, 220); width: 92px; text-align: center;">
+			<p>營業外支出</p>
+			</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">
+			<p>租賃負債利息支出</p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">租賃期滿可取得所有權或具優先承購權部分</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;"><span style="color:red;">其中非屬</span>租賃期滿可取得所有權或具優先承購權之<span style="color:red;">營造機具利息</span>約</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">
+			<p>(19)</p>
+			</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">
+			<p>&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B061900.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B061900.IsManual &amp;&amp; cardData[0].B061900.DataErrorListColumnId==-1" :haserror="cardData[0].B061900.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B061900" size="15" style="text-align: right;" type="text" v-model="cardData[0].B061900.FormValue" /> <span></span></p>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">(26)占 <span></span> <input :data-value="cardData[0].B062600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062600.IsManual &amp;&amp; cardData[0].B062600.DataErrorListColumnId==-1" :haserror="cardData[0].B062600.DataErrorListColumnId" maxlength="3" name="0_B062600" size="3" style="text-align: right;" type="text" v-model="cardData[0].B062600.FormValue" /> <span></span> ％</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:0;">
+				<tbody>
+					<tr>
+						<td>
+						<p style="text-align: center;">(28)占 <span></span> <input :data-value="cardData[0].B062800.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062800.IsManual &amp;&amp; cardData[0].B062800.DataErrorListColumnId==-1" :haserror="cardData[0].B062800.DataErrorListColumnId" maxlength="3" name="0_B062800" size="3" style="text-align: right;" type="text" v-model="cardData[0].B062800.FormValue" /> <span></span> ％</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">其他利息支出</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(20)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B062000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062000.IsManual &amp;&amp; cardData[0].B062000.DataErrorListColumnId==-1" :haserror="cardData[0].B062000.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B062000" size="15" style="text-align: right;" type="text" v-model="cardData[0].B062000.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;">其他營業外支出</td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(21)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B062100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062100.IsManual &amp;&amp; cardData[0].B062100.DataErrorListColumnId==-1" :haserror="cardData[0].B062100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B062100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B062100.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 364px;"><strong>營業外支出小計[(19)~(21)]</strong></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(22)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B062200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062200.IsManual &amp;&amp; cardData[0].B062200.DataErrorListColumnId==-1" :haserror="cardData[0].B062200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B062200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B062200.FormValue" /> <span></span></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 456px; text-align: center;"><strong>各項支出合計[(18)+(22)]</strong></td>
+			<td rowspan="1" style="background-color: rgb(255, 220, 220); width: 61px; text-align: center;">(23)</td>
+			<td class="lockGroup" style="width: 215px; text-align: center;">&nbsp; &nbsp;&nbsp;<span></span><input :data-value="cardData[0].B062300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B062300.IsManual &amp;&amp; cardData[0].B062300.DataErrorListColumnId==-1" :haserror="cardData[0].B062300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B062300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B062300.FormValue" /> <span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><label class="caption">【07】110年全年無形投入金額：</label></p>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; 1. 研究發展：費用性支出&nbsp;<input :data-value="cardData[0].B070101.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070101.IsManual &amp;&amp; cardData[0].B070101.DataErrorListColumnId==-1" :haserror="cardData[0].B070101.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070101" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070101.FormValue" />&nbsp;元，資本性支出&nbsp;<input :data-value="cardData[0].B070102.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070102.IsManual &amp;&amp; cardData[0].B070102.DataErrorListColumnId==-1" :haserror="cardData[0].B070102.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070102" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070102.FormValue" /> 元。</div>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; 2. 員工訓練：費用性支出&nbsp;<input :data-value="cardData[0].B070201.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070201.IsManual &amp;&amp; cardData[0].B070201.DataErrorListColumnId==-1" :haserror="cardData[0].B070201.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070201" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070201.FormValue" />&nbsp;元，資本性支出&nbsp;<input :data-value="cardData[0].B070202.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070202.IsManual &amp;&amp; cardData[0].B070202.DataErrorListColumnId==-1" :haserror="cardData[0].B070202.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070202" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070202.FormValue" /> 元。</div>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; 3. 市場行銷：費用性支出&nbsp;<input :data-value="cardData[0].B070301.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070301.IsManual &amp;&amp; cardData[0].B070301.DataErrorListColumnId==-1" :haserror="cardData[0].B070301.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070301" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070301.FormValue" />&nbsp;元，資本性支出&nbsp;<input :data-value="cardData[0].B070302.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070302.IsManual &amp;&amp; cardData[0].B070302.DataErrorListColumnId==-1" :haserror="cardData[0].B070302.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070302" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070302.FormValue" /> 元。</div>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; 4. 電腦軟體、資料庫：費用性支出&nbsp;<input :data-value="cardData[0].B070401.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070401.IsManual &amp;&amp; cardData[0].B070401.DataErrorListColumnId==-1" :haserror="cardData[0].B070401.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070401" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070401.FormValue" />&nbsp;元，資本性支出&nbsp;<input :data-value="cardData[0].B070402.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B070402.IsManual &amp;&amp; cardData[0].B070402.DataErrorListColumnId==-1" :haserror="cardData[0].B070402.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B070402" size="15" style="text-align: right;" type="text" v-model="cardData[0].B070402.FormValue" /> 元。</div>
+
+<div style="width:640px;">&nbsp;</div>
+
+<div style="width:640px;"><label class="caption">【08】近5年(106至110年)創新活動：</label></div>
+
+<div style="width:640px;">&nbsp; &nbsp; &nbsp; <strong>1. 近5年有無推出全新型態或功能明顯提升之營建工程：</strong></div>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B080100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080100.IsManual &amp;&amp; cardData[0].B080100.DataErrorListColumnId==-1" :haserror="cardData[0].B080100.DataErrorListColumnId" class="textNumber" id="B080100_1" name="0_B080100" type="radio" v-model="cardData[0].B080100.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B080100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080100.IsManual &amp;&amp; cardData[0].B080100.DataErrorListColumnId==-1" :haserror="cardData[0].B080100.DataErrorListColumnId" class="textNumber" id="B080100_2" name="0_B080100" type="radio" v-model="cardData[0].B080100.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。
+<p>&nbsp;</p>
+</div>
+
+<div style="width:550px;">&nbsp; &nbsp; &nbsp; <strong>2. 近5年有無使用全新或技術明顯改進之施工技法?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B080200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080200.IsManual &amp;&amp; cardData[0].B080200.DataErrorListColumnId==-1" :haserror="cardData[0].B080200.DataErrorListColumnId" class="textNumber" id="B080200_1" name="0_B080200" type="radio" v-model="cardData[0].B080200.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B080200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080200.IsManual &amp;&amp; cardData[0].B080200.DataErrorListColumnId==-1" :haserror="cardData[0].B080200.DataErrorListColumnId" class="textNumber" id="B080200_2" name="0_B080200" type="radio" v-model="cardData[0].B080200.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:550px;">&nbsp; &nbsp; &nbsp; <strong>3. 近5年有無導入全新或明顯改進之行銷、組織策略或管理方式?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B080300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080300.IsManual &amp;&amp; cardData[0].B080300.DataErrorListColumnId==-1" :haserror="cardData[0].B080300.DataErrorListColumnId" class="textNumber" id="B080300_1" name="0_B080300" type="radio" v-model="cardData[0].B080300.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B080300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B080300.IsManual &amp;&amp; cardData[0].B080300.DataErrorListColumnId==-1" :haserror="cardData[0].B080300.DataErrorListColumnId" class="textNumber" id="B080300_2" name="0_B080300" type="radio" v-model="cardData[0].B080300.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:640px;"><label class="caption">【09】110年營運數位化狀況：</label></div>
+
+<div style="width:640px;">&nbsp; &nbsp; &nbsp; <strong>1. 有無使用電腦或網路設備：</strong><span style="color:red;">(含智慧型手機、平板電腦)</span></div>
+
+<div class="lockGroup" style="width:630px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090100.IsManual &amp;&amp; cardData[0].B090100.DataErrorListColumnId==-1" :haserror="cardData[0].B090100.DataErrorListColumnId" class="textNumber" id="B090100_1" name="0_B090100" type="radio" v-model="cardData[0].B090100.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<span style="color:red;">(勾選「有」者請續填第2至6問項)</span><input :data-value="cardData[0].B090100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090100.IsManual &amp;&amp; cardData[0].B090100.DataErrorListColumnId==-1" :haserror="cardData[0].B090100.DataErrorListColumnId" class="textNumber" id="B090100_2" name="0_B090100" type="radio" v-model="cardData[0].B090100.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。<span style="color:red;">(勾選「無」者請跳填第【10】問項)</span></div>
+
+<p>&nbsp;</p>
+
+<div style="width:300px;">&nbsp; &nbsp; &nbsp; <strong>2. 有無透過網路提供營業資訊?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090200.IsManual &amp;&amp; cardData[0].B090200.DataErrorListColumnId==-1" :haserror="cardData[0].B090200.DataErrorListColumnId" class="textNumber" id="B090200_1" name="0_B090200" type="radio" v-model="cardData[0].B090200.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B090200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090200.IsManual &amp;&amp; cardData[0].B090200.DataErrorListColumnId==-1" :haserror="cardData[0].B090200.DataErrorListColumnId" class="textNumber" id="B090200_2" name="0_B090200" type="radio" v-model="cardData[0].B090200.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:450px;"><strong>&nbsp; &nbsp; &nbsp; 3. 有無電子化(網路)銷售或接單?</strong></div>
+
+<div class="lockGroup" style="width:700px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090300.IsManual &amp;&amp; cardData[0].B090300.DataErrorListColumnId==-1" :haserror="cardData[0].B090300.DataErrorListColumnId" class="textNumber" id="B090300_1" name="0_B090300" type="radio" v-model="cardData[0].B090300.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;(1)有。 (1)A.全年交易金額&nbsp; <input :data-value="cardData[0].B090311.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090311.IsManual &amp;&amp; cardData[0].B090311.DataErrorListColumnId==-1" :haserror="cardData[0].B090311.DataErrorListColumnId" class="textNumber" maxlength="10" name="0_B090311" size="10" style="text-align: right;" type="text" v-model="cardData[0].B090311.FormValue" />&nbsp;萬元，其中銷售給一般家庭民眾之比率&nbsp; <input :data-value="cardData[0].B090312.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090312.IsManual &amp;&amp; cardData[0].B090312.DataErrorListColumnId==-1" :haserror="cardData[0].B090312.DataErrorListColumnId" class="textNumber" maxlength="3" name="0_B090312" size="3" style="text-align: right;" type="text" v-model="cardData[0].B090312.FormValue" />&nbsp;%。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1)B.其中有無跨國(境)銷售&nbsp; &nbsp; &nbsp;&nbsp; <input :data-value="cardData[0].B090320.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090320.IsManual &amp;&amp; cardData[0].B090320.DataErrorListColumnId==-1" :haserror="cardData[0].B090320.DataErrorListColumnId" class="textNumber" id="B090320_1" name="0_B090320" type="radio" v-model="cardData[0].B090320.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;a.有； <input :data-value="cardData[0].B090320.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090320.IsManual &amp;&amp; cardData[0].B090320.DataErrorListColumnId==-1" :haserror="cardData[0].B090320.DataErrorListColumnId" class="textNumber" id="B090320_0" name="0_B090320" type="radio" v-model="cardData[0].B090320.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;b.無。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (1)C.其中有無使用第三方支付&nbsp;&nbsp;<input :data-value="cardData[0].B090330.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090330.IsManual &amp;&amp; cardData[0].B090330.DataErrorListColumnId==-1" :haserror="cardData[0].B090330.DataErrorListColumnId" class="textNumber" id="B090330_1" name="0_B090330" type="radio" v-model="cardData[0].B090330.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;a.有； <input :data-value="cardData[0].B090330.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090330.IsManual &amp;&amp; cardData[0].B090330.DataErrorListColumnId==-1" :haserror="cardData[0].B090330.DataErrorListColumnId" class="textNumber" id="B090330_0" name="0_B090330" type="radio" v-model="cardData[0].B090330.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;b.無。</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090300.IsManual &amp;&amp; cardData[0].B090300.DataErrorListColumnId==-1" :haserror="cardData[0].B090300.DataErrorListColumnId" class="textNumber" id="B090300_2" name="0_B090300" type="radio" v-model="cardData[0].B090300.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;(2)無。</p>
+</div>
+
+<div class="lockGroup" style="width:550px;"><strong>&nbsp; &nbsp; &nbsp; 4. 有無提供銷售交易之行動支付功能?<span style="color:red;">(不含網路銷售交易)&nbsp;&nbsp;</span></strong> <input :data-value="cardData[0].B090400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090400.IsManual &amp;&amp; cardData[0].B090400.DataErrorListColumnId==-1" :haserror="cardData[0].B090400.DataErrorListColumnId" class="textNumber" id="B090400_1" name="0_B090400" type="radio" v-model="cardData[0].B090400.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;(1)有； <input :data-value="cardData[0].B090400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090400.IsManual &amp;&amp; cardData[0].B090400.DataErrorListColumnId==-1" :haserror="cardData[0].B090400.DataErrorListColumnId" class="textNumber" id="B090400_2" name="0_B090400" type="radio" v-model="cardData[0].B090400.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;(2)無。<strong><span style="color:red;"></span></strong></div>
+
+<p>&nbsp;</p>
+
+<div class="lockGroup" style="width:550px;"><strong>&nbsp; &nbsp; &nbsp; 5. 有無採行下列措施，以加強資(通)訊安全?</strong>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090500.IsManual &amp;&amp; cardData[0].B090500.DataErrorListColumnId==-1" :haserror="cardData[0].B090500.DataErrorListColumnId" class="textNumber" id="B090500_1" name="0_B090500" type="radio" v-model="cardData[0].B090500.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;(1)有：<span style="color:red;">(若填有，以下可複選)</span></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input :data-value="cardData[0].B090510.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090510.IsManual &amp;&amp; cardData[0].B090510.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090510.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090510" name="0_B090510" type="checkbox" v-model="cardData[0].B090510.FormValue" /> 使用資安產品/服務<input :data-value="cardData[0].B090520.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090520.IsManual &amp;&amp; cardData[0].B090520.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090520.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090520" name="0_B090520" type="checkbox" v-model="cardData[0].B090520.FormValue" /> 訂定資安管理規則<input :data-value="cardData[0].B090530.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090530.IsManual &amp;&amp; cardData[0].B090530.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090530.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090530" name="0_B090530" type="checkbox" v-model="cardData[0].B090530.FormValue" /> 設立專責資安單位/人員</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090500.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090500.IsManual &amp;&amp; cardData[0].B090500.DataErrorListColumnId==-1" :haserror="cardData[0].B090500.DataErrorListColumnId" class="textNumber" id="B090500_2" name="0_B090500" type="radio" v-model="cardData[0].B090500.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;(2)無。</p>
+</div>
+
+<p>&nbsp;</p>
+
+<div class="lockGroup" style="width:700px;"><strong>&nbsp; &nbsp; &nbsp; 6. 電腦或網路設備使用情形</strong><label class="caption">：</label>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090600.IsManual &amp;&amp; cardData[0].B090600.DataErrorListColumnId==-1" :haserror="cardData[0].B090600.DataErrorListColumnId" class="textNumber" id="B090600_1" name="0_B090600" type="radio" v-model="cardData[0].B090600.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;(1)僅使用於基礎作業：<span style="color:red;">(勾選(1)者請跳填【10】問項)</span></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B090600.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090600.IsManual &amp;&amp; cardData[0].B090600.DataErrorListColumnId==-1" :haserror="cardData[0].B090600.DataErrorListColumnId" class="textNumber" id="B090600_2" name="0_B090600" type="radio" v-model="cardData[0].B090600.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;(2)同時使用於基礎及生產服務等進階作業<span style="color:red;">(勾選(2)者請續填第(2)A及(2)B問項)</span></p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2)A.有無運用企業資源規劃(ERP)系統或顧客關係管理(CRM)系統?&nbsp; <input :data-value="cardData[0].B090611.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090611.IsManual &amp;&amp; cardData[0].B090611.DataErrorListColumnId==-1" :haserror="cardData[0].B090611.DataErrorListColumnId" class="textNumber" id="B090611_1" name="0_B090611" type="radio" v-model="cardData[0].B090611.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;a.有<input :data-value="cardData[0].B090611.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090611.IsManual &amp;&amp; cardData[0].B090611.DataErrorListColumnId==-1" :haserror="cardData[0].B090611.DataErrorListColumnId" class="textNumber" id="B090611_2" name="0_B090611" type="radio" v-model="cardData[0].B090611.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;b.無</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (2)B.有無運用下列技術?&nbsp; <input :data-value="cardData[0].B090612.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090612.IsManual &amp;&amp; cardData[0].B090612.DataErrorListColumnId==-1" :haserror="cardData[0].B090612.DataErrorListColumnId" class="textNumber" id="B090612_1" name="0_B090612" type="radio" v-model="cardData[0].B090612.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />&nbsp;a.有<span style="color:red;">(請續勾選下表有運用的技術)</span><input :data-value="cardData[0].B090612.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090612.IsManual &amp;&amp; cardData[0].B090612.DataErrorListColumnId==-1" :haserror="cardData[0].B090612.DataErrorListColumnId" class="textNumber" id="B090612_2" name="0_B090612" type="radio" v-model="cardData[0].B090612.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />&nbsp;b.無<span style="color:red;">(<span style="color:red;">請跳填【10】問項</span>)</span></p>
+</div>
+
+<div style="position:relative;left:100px;">
+<table border="1" cellspacing="0" padding="0" style="border-collapse: collapse; border: none; width: 413px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); width: 111px; text-align: center;"><strong>技術項目</strong></td>
+			<td colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); width: 96px; text-align: center;">
+			<p><strong>有運用者</strong></p>
+
+			<p><strong>請勾選</strong></p>
+
+			<p><span style="color:red;"><strong>(可複選)</strong></span></p>
+			</td>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); width: 155px; text-align: center;"><b>主要運用作業</b></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 67px; text-align: center;"><strong>項目一</strong></td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 87px; text-align: center;"><strong>項目二</strong></td>
+		</tr>
+		<tr class="lockGroupTR">
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 111px;">1.雲端運算、儲存</td>
+			<td colspan="1" rowspan="1" style="width: 96px; text-align: center;">&nbsp;<input :data-value="cardData[0].B090620.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090620.IsManual &amp;&amp; cardData[0].B090620.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090620.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090620" name="0_B090620" type="checkbox" v-model="cardData[0].B090620.FormValue" /></td>
+			<td style="width: 67px; text-align: center;"><span></span> <input :data-value="cardData[0].B090621.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090621.IsManual &amp;&amp; cardData[0].B090621.DataErrorListColumnId==-1" :haserror="cardData[0].B090621.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090621" size="1" type="text" v-model="cardData[0].B090621.FormValue" /><span></span></td>
+			<td style="width: 87px; text-align: center;"><span></span> <input :data-value="cardData[0].B090622.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090622.IsManual &amp;&amp; cardData[0].B090622.DataErrorListColumnId==-1" :haserror="cardData[0].B090622.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090622" size="1" type="text" v-model="cardData[0].B090622.FormValue" /><span></span></td>
+		</tr>
+		<tr class="lockGroupTR">
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 111px;">2.巨量資料(大數據)分析</td>
+			<td colspan="1" rowspan="1" style="width: 96px; text-align: center;">&nbsp;<input :data-value="cardData[0].B090630.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090630.IsManual &amp;&amp; cardData[0].B090630.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090630.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090630" name="0_B090630" type="checkbox" v-model="cardData[0].B090630.FormValue" /></td>
+			<td style="width: 67px; text-align: center;"><span></span> <input :data-value="cardData[0].B090631.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090631.IsManual &amp;&amp; cardData[0].B090631.DataErrorListColumnId==-1" :haserror="cardData[0].B090631.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090631" size="1" type="text" v-model="cardData[0].B090631.FormValue" /> <span></span></td>
+			<td style="width: 87px; text-align: center;"><span></span><input :data-value="cardData[0].B090632.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090632.IsManual &amp;&amp; cardData[0].B090632.DataErrorListColumnId==-1" :haserror="cardData[0].B090632.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090632" size="1" type="text" v-model="cardData[0].B090632.FormValue" /> <span></span></td>
+		</tr>
+		<tr class="lockGroupTR">
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 111px;">3.物聯網(IoT)</td>
+			<td colspan="1" rowspan="1" style="width: 96px; text-align: center;">&nbsp;<input :data-value="cardData[0].B090640.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090640.IsManual &amp;&amp; cardData[0].B090640.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090640.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090640" name="0_B090640" type="checkbox" v-model="cardData[0].B090640.FormValue" /></td>
+			<td style="width: 67px; text-align: center;"><span></span><input :data-value="cardData[0].B090641.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090641.IsManual &amp;&amp; cardData[0].B090641.DataErrorListColumnId==-1" :haserror="cardData[0].B090641.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090641" size="1" type="text" v-model="cardData[0].B090641.FormValue" /> <span></span></td>
+			<td style="width: 87px; text-align: center;"><span></span> <input :data-value="cardData[0].B090642.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090642.IsManual &amp;&amp; cardData[0].B090642.DataErrorListColumnId==-1" :haserror="cardData[0].B090642.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090642" size="1" type="text" v-model="cardData[0].B090642.FormValue" /> <span></span></td>
+		</tr>
+		<tr class="lockGroupTR">
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 111px;">4.人工智慧(AI)</td>
+			<td colspan="1" rowspan="1" style="width: 96px; text-align: center;">&nbsp;<input :data-value="cardData[0].B090650.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090650.IsManual &amp;&amp; cardData[0].B090650.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090650.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090650" name="0_B090650" type="checkbox" v-model="cardData[0].B090650.FormValue" /></td>
+			<td style="width: 67px; text-align: center;"><span></span> <input :data-value="cardData[0].B090651.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090651.IsManual &amp;&amp; cardData[0].B090651.DataErrorListColumnId==-1" :haserror="cardData[0].B090651.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090651" size="1" type="text" v-model="cardData[0].B090651.FormValue" /> <span></span></td>
+			<td style="width: 87px; text-align: center;"><span></span> <input :data-value="cardData[0].B090652.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090652.IsManual &amp;&amp; cardData[0].B090652.DataErrorListColumnId==-1" :haserror="cardData[0].B090652.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090652" size="1" type="text" v-model="cardData[0].B090652.FormValue" /> <span></span></td>
+		</tr>
+		<tr class="lockGroupTR">
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); width: 111px;">5.機器人(包括機器手臂)</td>
+			<td colspan="1" rowspan="1" style="width: 96px; text-align: center;">&nbsp;<input :data-value="cardData[0].B090660.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090660.IsManual &amp;&amp; cardData[0].B090660.DataErrorListColumnId==-1" :false-value="0" :haserror="cardData[0].B090660.DataErrorListColumnId" :true-value="1" class="textNumber" id="B090660" name="0_B090660" type="checkbox" v-model="cardData[0].B090660.FormValue" /></td>
+			<td style="width: 67px; text-align: center;"><span></span><input :data-value="cardData[0].B090661.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090661.IsManual &amp;&amp; cardData[0].B090661.DataErrorListColumnId==-1" :haserror="cardData[0].B090661.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090661" size="1" type="text" v-model="cardData[0].B090661.FormValue" /><span></span></td>
+			<td style="width: 87px; text-align: center;"><span></span> <input :data-value="cardData[0].B090662.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B090662.IsManual &amp;&amp; cardData[0].B090662.DataErrorListColumnId==-1" :haserror="cardData[0].B090662.DataErrorListColumnId" class="textCenter currentCode commerce_code01" maxlength="1" name="0_B090662" size="1" type="text" v-model="cardData[0].B090662.FormValue" /><span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+
+<div style="width:1040px;"><label class="caption">【10】110年跨國(境)服務交易、投資布局及外資持股情形：</label></div>
+
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border: none; width: 1037px;">
+	<tbody>
+		<tr>
+			<td class="head" colspan="1" rowspan="1" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 248px; text-align: center;"><strong>項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 目 </strong></td>
+			<td class="head" colspan="8" rowspan="1" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 764px; text-align: center;"><strong>有<span style="color:red">(續填寫以下資訊)</span></strong></td>
+			<td class="head" colspan="1" rowspan="1" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 19px; text-align: center;"><strong>無</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 248px;">
+			<p><strong>1. 全年有無與國(境)外企業(機構)進行</strong></p>
+
+			<p><strong>&nbsp; &nbsp; 服務或勞務(不含有形商品)交易？</strong></p>
+			</td>
+			<td colspan="8" rowspan="1" style="width: 764px;">
+			<p><input :data-value="cardData[0].B100100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100100.IsManual &amp;&amp; cardData[0].B100100.DataErrorListColumnId==-1" :haserror="cardData[0].B100100.DataErrorListColumnId" class="textNumber" id="B100100_1" name="0_B100100" type="radio" v-model="cardData[0].B100100.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /><strong>有</strong></p>
+
+			<p>&nbsp;↘<input :data-value="cardData[0].B100101.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100101.IsManual &amp;&amp; cardData[0].B100101.DataErrorListColumnId==-1" :haserror="cardData[0].B100101.DataErrorListColumnId" class="textNumber" id="B100101_1" name="0_B100101" type="radio" v-model="cardData[0].B100101.FormValue" v-on:click="unLockFollowColumn($event)" value="1" />(1)僅有採購服務或勞務(輸入) <input :data-value="cardData[0].B100101.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100101.IsManual &amp;&amp; cardData[0].B100101.DataErrorListColumnId==-1" :haserror="cardData[0].B100101.DataErrorListColumnId" class="textNumber" id="B100101_2" name="0_B100101" type="radio" v-model="cardData[0].B100101.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />(2)僅有提供服務或勞務(輸出)<input :data-value="cardData[0].B100101.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100101.IsManual &amp;&amp; cardData[0].B100101.DataErrorListColumnId==-1" :haserror="cardData[0].B100101.DataErrorListColumnId" class="textNumber" id="B100101_3" name="0_B100101" type="radio" v-model="cardData[0].B100101.FormValue" v-on:click="unLockFollowColumn($event)" value="3" />(3)二者皆有</p>
+			</td>
+			<td style="width: 19px; text-align: center;"><input :data-value="cardData[0].B100100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100100.IsManual &amp;&amp; cardData[0].B100100.DataErrorListColumnId==-1" :haserror="cardData[0].B100100.DataErrorListColumnId" class="textNumber" id="B100100_2" name="0_B100100" type="radio" v-model="cardData[0].B100100.FormValue" v-on:click="unLockFollowColumn($event)" value="2" /></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="3" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 248px;">
+			<p><strong>2. 年底有無單一外資股東持有貴企業</strong></p>
+
+			<p><strong>&nbsp; &nbsp; 10%(含)以上之股權?</strong></p>
+			</td>
+			<td colspan="8" rowspan="1" style="width: 190px;">
+			<p><input :data-value="cardData[0].B100200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100200.IsManual &amp;&amp; cardData[0].B100200.DataErrorListColumnId==-1" :haserror="cardData[0].B100200.DataErrorListColumnId" class="textNumber" id="B100200_1" name="0_B100200" type="radio" v-model="cardData[0].B100200.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /><strong>有</strong>，該類股東有<input :data-value="cardData[0].B100210.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100210.IsManual &amp;&amp; cardData[0].B100210.DataErrorListColumnId==-1" :haserror="cardData[0].B100210.DataErrorListColumnId" class="textNumber" maxlength="2" name="0_B100210" size="2" style="text-align: right;" type="text" v-model="cardData[0].B100210.FormValue" />個<span style="color:red;">(請按該類股東所在地續填下列持股比率之地區分布)</span></p>
+			</td>
+			<td colspan="1" rowspan="3" style="width: 19px; text-align: center;">
+			<p><input :data-value="cardData[0].B100200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100200.IsManual &amp;&amp; cardData[0].B100200.DataErrorListColumnId==-1" :haserror="cardData[0].B100200.DataErrorListColumnId" class="textNumber" id="B100200_2" name="0_B100200" type="radio" v-model="cardData[0].B100200.FormValue" v-on:click="unLockFollowColumn($event)" value="2" /></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="width: 114px;">
+			<p>持股比率地區分布</p>
+
+			<p style="text-align: center;"><span style="color:red;">(請四捨五入</span></p>
+
+			<p style="text-align: center;"><span style="color:red;">至整數位)</span></p>
+			</td>
+			<td style="width: 61px; background-color: rgb(255, 220, 220); text-align: center;"><strong>合計</strong></td>
+			<td style="width: 101px; background-color: rgb(255, 220, 220);">
+			<p style="text-align: center;">中國大陸</p>
+
+			<p style="text-align: center;"><span style="color:red;">(含港澳)</span></p>
+			</td>
+			<td style="width: 522px; background-color: rgb(255, 220, 220); text-align: center;">東南亞</td>
+			<td style="width: 522px; background-color: rgb(255, 220, 220); text-align: center;">南亞及其他</td>
+			<td style="width: 522px; background-color: rgb(255, 220, 220); text-align: center;">美洲</td>
+			<td style="width: 522px; background-color: rgb(255, 220, 220); text-align: center;">歐洲</td>
+			<td style="width: 522px;background-color: rgb(255, 220, 220);">
+			<p style="text-align: center;">紐、澳及</p>
+
+			<p style="text-align: center;">其他地區</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 61px; text-align: center;"><input :data-value="cardData[0].B100220.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100220.IsManual &amp;&amp; cardData[0].B100220.DataErrorListColumnId==-1" :haserror="cardData[0].B100220.DataErrorListColumnId" maxlength="3" name="0_B100220" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100220.FormValue" />%</td>
+			<td style="width: 101px; text-align: center;"><input :data-value="cardData[0].B100221.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100221.IsManual &amp;&amp; cardData[0].B100221.DataErrorListColumnId==-1" :haserror="cardData[0].B100221.DataErrorListColumnId" maxlength="3" name="0_B100221" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100221.FormValue" />%</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100222.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100222.IsManual &amp;&amp; cardData[0].B100222.DataErrorListColumnId==-1" :haserror="cardData[0].B100222.DataErrorListColumnId" maxlength="3" name="0_B100222" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100222.FormValue" />%</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100223.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100223.IsManual &amp;&amp; cardData[0].B100223.DataErrorListColumnId==-1" :haserror="cardData[0].B100223.DataErrorListColumnId" maxlength="3" name="0_B100223" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100223.FormValue" />%</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100224.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100224.IsManual &amp;&amp; cardData[0].B100224.DataErrorListColumnId==-1" :haserror="cardData[0].B100224.DataErrorListColumnId" maxlength="3" name="0_B100224" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100224.FormValue" />%</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100225.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100225.IsManual &amp;&amp; cardData[0].B100225.DataErrorListColumnId==-1" :haserror="cardData[0].B100225.DataErrorListColumnId" maxlength="3" name="0_B100225" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100225.FormValue" />%</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100226.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100226.IsManual &amp;&amp; cardData[0].B100226.DataErrorListColumnId==-1" :haserror="cardData[0].B100226.DataErrorListColumnId" maxlength="3" name="0_B100226" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100226.FormValue" />%</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 248px;">
+			<p><strong>3. 年底有無國(境)外分支單位?</strong></p>
+			</td>
+			<td colspan="2" rowspan="1" style="width: 187px;"><input :data-value="cardData[0].B100300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100300.IsManual &amp;&amp; cardData[0].B100300.DataErrorListColumnId==-1" :haserror="cardData[0].B100300.DataErrorListColumnId" class="textNumber" id="B100300_1" name="0_B100300" type="radio" v-model="cardData[0].B100300.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /><strong>有，合計</strong><input :data-value="cardData[0].B100310.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100310.IsManual &amp;&amp; cardData[0].B100310.DataErrorListColumnId==-1" :haserror="cardData[0].B100310.DataErrorListColumnId" class="textNumber" maxlength="3" name="0_B100310" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100310.FormValue" />家</td>
+			<td style="width: 101px; text-align: center;"><input :data-value="cardData[0].B100311.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100311.IsManual &amp;&amp; cardData[0].B100311.DataErrorListColumnId==-1" :haserror="cardData[0].B100311.DataErrorListColumnId" maxlength="3" name="0_B100311" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100311.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100312.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100312.IsManual &amp;&amp; cardData[0].B100312.DataErrorListColumnId==-1" :haserror="cardData[0].B100312.DataErrorListColumnId" maxlength="3" name="0_B100312" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100312.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100313.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100313.IsManual &amp;&amp; cardData[0].B100313.DataErrorListColumnId==-1" :haserror="cardData[0].B100313.DataErrorListColumnId" maxlength="3" name="0_B100313" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100313.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100314.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100314.IsManual &amp;&amp; cardData[0].B100314.DataErrorListColumnId==-1" :haserror="cardData[0].B100314.DataErrorListColumnId" maxlength="3" name="0_B100314" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100314.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100315.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100315.IsManual &amp;&amp; cardData[0].B100315.DataErrorListColumnId==-1" :haserror="cardData[0].B100315.DataErrorListColumnId" maxlength="3" name="0_B100315" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100315.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100316.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100316.IsManual &amp;&amp; cardData[0].B100316.DataErrorListColumnId==-1" :haserror="cardData[0].B100316.DataErrorListColumnId" maxlength="3" name="0_B100316" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100316.FormValue" />家</td>
+			<td style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100300.IsManual &amp;&amp; cardData[0].B100300.DataErrorListColumnId==-1" :haserror="cardData[0].B100300.DataErrorListColumnId" class="textNumber" id="B100300_2" name="0_B100300" type="radio" v-model="cardData[0].B100300.FormValue" v-on:click="unLockFollowColumn($event)" value="2" /></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="vertical-align: text-top; background-color: rgb(255, 220, 220); width: 248px;">
+			<p><strong>4. 年底有無對國(境)外單一企業具有控</strong></p>
+
+			<p><strong>&nbsp; &nbsp; 制能力？</strong></p>
+			</td>
+			<td colspan="2" rowspan="1" style="width: 187px;">
+			<p><input :data-value="cardData[0].B100400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100400.IsManual &amp;&amp; cardData[0].B100400.DataErrorListColumnId==-1" :haserror="cardData[0].B100400.DataErrorListColumnId" class="textNumber" id="B100400_1" name="0_B100400" type="radio" v-model="cardData[0].B100400.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /><strong>有，合計</strong><input :data-value="cardData[0].B100310.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100310.IsManual &amp;&amp; cardData[0].B100310.DataErrorListColumnId==-1" :haserror="cardData[0].B100310.DataErrorListColumnId" class="textNumber" maxlength="3" name="0_B100310" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100310.FormValue" />家</p>
+			</td>
+			<td style="width: 101px; text-align: center;"><input :data-value="cardData[0].B100411.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100411.IsManual &amp;&amp; cardData[0].B100411.DataErrorListColumnId==-1" :haserror="cardData[0].B100411.DataErrorListColumnId" maxlength="3" name="0_B100411" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100411.FormValue" />家</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100412.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100412.IsManual &amp;&amp; cardData[0].B100412.DataErrorListColumnId==-1" :haserror="cardData[0].B100412.DataErrorListColumnId" maxlength="3" name="0_B100412" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100412.FormValue" />家</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100413.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100413.IsManual &amp;&amp; cardData[0].B100413.DataErrorListColumnId==-1" :haserror="cardData[0].B100413.DataErrorListColumnId" maxlength="3" name="0_B100413" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100413.FormValue" />家</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100414.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100414.IsManual &amp;&amp; cardData[0].B100414.DataErrorListColumnId==-1" :haserror="cardData[0].B100414.DataErrorListColumnId" maxlength="3" name="0_B100414" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100414.FormValue" />家</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100415.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100415.IsManual &amp;&amp; cardData[0].B100415.DataErrorListColumnId==-1" :haserror="cardData[0].B100415.DataErrorListColumnId" maxlength="3" name="0_B100415" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100415.FormValue" />家</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100416.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100416.IsManual &amp;&amp; cardData[0].B100416.DataErrorListColumnId==-1" :haserror="cardData[0].B100416.DataErrorListColumnId" maxlength="3" name="0_B100416" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100416.FormValue" />家</td>
+			<td colspan="2" rowspan="2" style="width: 522px; text-align: center;"><input :data-value="cardData[0].B100400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100400.IsManual &amp;&amp; cardData[0].B100400.DataErrorListColumnId==-1" :haserror="cardData[0].B100400.DataErrorListColumnId" class="textNumber" id="B100400_2" name="0_B100400" type="radio" v-model="cardData[0].B100400.FormValue" v-on:click="unLockFollowColumn($event)" value="2" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="1" style="width: 187px;">
+			<p>期末累計投資金額</p>
+
+			<p><input :data-value="cardData[0].B100420.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100420.IsManual &amp;&amp; cardData[0].B100420.DataErrorListColumnId==-1" :haserror="cardData[0].B100420.DataErrorListColumnId" maxlength="10" name="0_B100420" size="10" style="text-align: right;" type="text" v-model="cardData[0].B100420.FormValue" />萬元</p>
+			</td>
+			<td style="width: 101px; text-align: center;"><input :data-value="cardData[0].B100421.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100421.IsManual &amp;&amp; cardData[0].B100421.DataErrorListColumnId==-1" :haserror="cardData[0].B100421.DataErrorListColumnId" maxlength="3" name="0_B100421" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100421.FormValue" />%</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100422.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100422.IsManual &amp;&amp; cardData[0].B100422.DataErrorListColumnId==-1" :haserror="cardData[0].B100422.DataErrorListColumnId" maxlength="3" name="0_B100422" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100422.FormValue" />%</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100423.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100423.IsManual &amp;&amp; cardData[0].B100423.DataErrorListColumnId==-1" :haserror="cardData[0].B100423.DataErrorListColumnId" maxlength="3" name="0_B100423" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100423.FormValue" />%</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100424.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100424.IsManual &amp;&amp; cardData[0].B100424.DataErrorListColumnId==-1" :haserror="cardData[0].B100424.DataErrorListColumnId" maxlength="3" name="0_B100424" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100424.FormValue" />%</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100425.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100425.IsManual &amp;&amp; cardData[0].B100425.DataErrorListColumnId==-1" :haserror="cardData[0].B100425.DataErrorListColumnId" maxlength="3" name="0_B100425" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100425.FormValue" />%</td>
+			<td style="width: 174px; text-align: center;"><input :data-value="cardData[0].B100426.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B100426.IsManual &amp;&amp; cardData[0].B100426.DataErrorListColumnId==-1" :haserror="cardData[0].B100426.DataErrorListColumnId" maxlength="3" name="0_B100426" size="3" style="text-align: right;" type="text" v-model="cardData[0].B100426.FormValue" />%</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<div style="width:300px;"><label class="caption">【11】110年全年有無自有品牌經營：</label></div>
+
+<div class="lockGroup" style="width:150px;">&nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B110000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B110000.IsManual &amp;&amp; cardData[0].B110000.DataErrorListColumnId==-1" :haserror="cardData[0].B110000.DataErrorListColumnId" class="textNumber" id="B110000_1" name="0_B110000" type="radio" v-model="cardData[0].B110000.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有； <input :data-value="cardData[0].B110000.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B110000.IsManual &amp;&amp; cardData[0].B110000.DataErrorListColumnId==-1" :haserror="cardData[0].B110000.DataErrorListColumnId" class="textNumber" id="B110000_2" name="0_B110000" type="radio" v-model="cardData[0].B110000.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:740px;"><label class="caption">【12】110年全年專業技術交易金額：</label></div>
+
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border:none;width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 目</strong></td>
+			<td style="background-color: rgb(255, 220, 220); text-align: center;"><strong>國內(元)</strong></td>
+			<td style="background-color: rgb(255, 220, 220); text-align: center;"><strong>國外(元)</strong></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="2" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>專業技術</strong></td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>銷售(1)</strong></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B120100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B120100.IsManual &amp;&amp; cardData[0].B120100.DataErrorListColumnId==-1" :haserror="cardData[0].B120100.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B120100" size="15" style="text-align: right;" type="text" v-model="cardData[0].B120100.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B120300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B120300.IsManual &amp;&amp; cardData[0].B120300.DataErrorListColumnId==-1" :haserror="cardData[0].B120300.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B120300" size="15" style="text-align: right;" type="text" v-model="cardData[0].B120300.FormValue" /><span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;"><strong>購入(2)</strong></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B120200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B120200.IsManual &amp;&amp; cardData[0].B120200.DataErrorListColumnId==-1" :haserror="cardData[0].B120200.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B120200" size="15" style="text-align: right;" type="text" v-model="cardData[0].B120200.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B120400.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B120400.IsManual &amp;&amp; cardData[0].B120400.DataErrorListColumnId==-1" :haserror="cardData[0].B120400.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B120400" size="15" style="text-align: right;" type="text" v-model="cardData[0].B120400.FormValue" /><span></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<div style="width:740px;"><label class="caption">【13】110年全年製造過程中，有無從事以下環保(循環經濟)活動：</label><strong><span style="color:red;">[限主要業別為製造業填寫]</span></strong></div>
+
+<div style="width:550px;">&nbsp; &nbsp; &nbsp; <strong>1. 有無進行廢棄物(產品)出售或回收再生處理?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B130100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130100.IsManual &amp;&amp; cardData[0].B130100.DataErrorListColumnId==-1" :haserror="cardData[0].B130100.DataErrorListColumnId" class="textNumber" id="B130100_1" name="0_B130100" type="radio" v-model="cardData[0].B130100.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B130100.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130100.IsManual &amp;&amp; cardData[0].B130100.DataErrorListColumnId==-1" :haserror="cardData[0].B130100.DataErrorListColumnId" class="textNumber" id="B130100_2" name="0_B130100" type="radio" v-model="cardData[0].B130100.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:550px;">&nbsp; &nbsp; &nbsp; <strong>2. 有無運用再生或回收之資源、產品(零組件)投入生產?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B130200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130200.IsManual &amp;&amp; cardData[0].B130200.DataErrorListColumnId==-1" :haserror="cardData[0].B130200.DataErrorListColumnId" class="textNumber" id="B130200_1" name="0_B130200" type="radio" v-model="cardData[0].B130200.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B130200.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130200.IsManual &amp;&amp; cardData[0].B130200.DataErrorListColumnId==-1" :haserror="cardData[0].B130200.DataErrorListColumnId" class="textNumber" id="B130200_2" name="0_B130200" type="radio" v-model="cardData[0].B130200.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:550px;">&nbsp; &nbsp; &nbsp; <strong>3. 有無透過設計或生產規劃，建造壽命較長或有利循環的產品?</strong></div>
+
+<div class="lockGroup" style="width:180px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input :data-value="cardData[0].B130300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130300.IsManual &amp;&amp; cardData[0].B130300.DataErrorListColumnId==-1" :haserror="cardData[0].B130300.DataErrorListColumnId" class="textNumber" id="B130300_1" name="0_B130300" type="radio" v-model="cardData[0].B130300.FormValue" v-on:click="unLockFollowColumn($event)" value="1" /> 有；<input :data-value="cardData[0].B130300.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B130300.IsManual &amp;&amp; cardData[0].B130300.DataErrorListColumnId==-1" :haserror="cardData[0].B130300.DataErrorListColumnId" class="textNumber" id="B130300_2" name="0_B130300" type="radio" v-model="cardData[0].B130300.FormValue" v-on:click="unLockFollowColumn($event)" value="2" />無。</div>
+
+<p>&nbsp;</p>
+
+<div style="width:740px;"><label class="caption">【14】110年全年營建工程施工價值：</label></div>
+
+<div style="width:740px;">
+<table border="1" cellpadding="1" cellspacing="1" class="lockGroup" style="border:none;width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">項&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 目</td>
+			<td style="background-color: rgb(255, 220, 220); text-align: center;">
+			<p>施工價值(元)</p>
+
+			<p><span style="color:red;"><span style="color:red;">(應扣除110年攤提之發包工程款及發</span></span></p>
+
+			<p><span style="color:red;"><span style="color:red;">包工程提供之材料價值，不含土地成本)</span></span></p>
+			</td>
+			<td style="background-color: rgb(255, 220, 220); text-align: center;">
+			<p>由業主及營建同業提供材料估計價值(元)</p>
+
+			<p><span style="color:red;">(限填110年耗用之部分)</span></p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220);">住宅工程</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">(1)</td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140801.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140801.IsManual &amp;&amp; cardData[0].B140801.DataErrorListColumnId==-1" :haserror="cardData[0].B140801.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140801" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140801.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140806.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140806.IsManual &amp;&amp; cardData[0].B140806.DataErrorListColumnId==-1" :haserror="cardData[0].B140806.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140806" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140806.FormValue" /><span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220);">其他房屋工程</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">(2)</td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140802.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140802.IsManual &amp;&amp; cardData[0].B140802.DataErrorListColumnId==-1" :haserror="cardData[0].B140802.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140802" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140802.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140807.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140807.IsManual &amp;&amp; cardData[0].B140807.DataErrorListColumnId==-1" :haserror="cardData[0].B140807.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140807" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140807.FormValue" /><span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220);">公共設施工程</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">(3)</td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140803.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140803.IsManual &amp;&amp; cardData[0].B140803.DataErrorListColumnId==-1" :haserror="cardData[0].B140803.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140803" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140803.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140808.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140808.IsManual &amp;&amp; cardData[0].B140808.DataErrorListColumnId==-1" :haserror="cardData[0].B140808.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140808" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140808.FormValue" /><span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220);">其他營建工程</td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">(4)</td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140804.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140804.IsManual &amp;&amp; cardData[0].B140804.DataErrorListColumnId==-1" :haserror="cardData[0].B140804.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140804" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140804.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140809.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140809.IsManual &amp;&amp; cardData[0].B140809.DataErrorListColumnId==-1" :haserror="cardData[0].B140809.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140809" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140809.FormValue" /><span></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220);"><strong>合計[(1)~(4)]</strong></td>
+			<td colspan="1" rowspan="1" style="background-color: rgb(255, 220, 220); text-align: center;">(5)</td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140805.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140805.IsManual &amp;&amp; cardData[0].B140805.DataErrorListColumnId==-1" :haserror="cardData[0].B140805.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140805" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140805.FormValue" /><span></span></td>
+			<td style="text-align: center;"><span></span><input :data-value="cardData[0].B140810.PreviousData" :disabled="!unlockAllColumn &amp;&amp; !cardData[0].B140810.IsManual &amp;&amp; cardData[0].B140810.DataErrorListColumnId==-1" :haserror="cardData[0].B140810.DataErrorListColumnId" class="textNumber" maxlength="15" name="0_B140810" size="15" style="text-align: right;" type="text" v-model="cardData[0].B140810.FormValue" /><span></span></td>
+		</tr>
+	</tbody>
+</table>
+</div>
