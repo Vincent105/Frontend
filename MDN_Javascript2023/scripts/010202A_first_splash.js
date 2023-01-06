@@ -12,5 +12,5 @@ let guessCount = 1;
 let resetButton;
 
 function checkGuess() { 
-    alert('I am a placeholder');
+    alert('I am a placeholder.');
 }
