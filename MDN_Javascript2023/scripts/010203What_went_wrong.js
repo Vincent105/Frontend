@@ -1,23 +1,21 @@
-let randomNumber = Math.floor(Math.random() * 100 + 1);
-
-//.代表CSS的class選擇器
+let randomNumber = Math.floor(Math.random()*100) + 1;
+console.log(randomNumber);
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
+//const lowOrHi = document.querySelector('lowOrHi');    有問題的版本
 const lowOrHi = document.querySelector('.lowOrHi');
-
 const guessSubmit = document.querySelector('.guessSubmit');
 const guessField = document.querySelector('.guessField');
 
 let guessCount = 1;
 let resetButton;
-guessField.focus();
 
 function checkGuess() {
-    var userGuess = Number(guessField.value);
+
+    const userGuess = Number(guessField.value);
     if (guessCount === 1) {
         guesses.textContent = 'Previous guesses: ';
     }
-
     guesses.textContent += userGuess + ' ';
 
     if (userGuess === randomNumber) {
@@ -42,8 +40,11 @@ function checkGuess() {
     guessField.value = '';
     guessField.focus();
 }
-
+//錯誤案例如下
+//guessSubmit.addeventListener('click', checkGuess);
 guessSubmit.addEventListener('click', checkGuess);
+
+//console.log(lowOrHi);
 
 function setGameOver() {
     guessField.disabled = true;
@@ -51,17 +52,17 @@ function setGameOver() {
     resetButton = document.createElement('button');
     resetButton.textContent = 'Start new game';
     document.body.appendChild(resetButton);
+    //resetButton.addeventListener('click', resetGame); 錯誤的版本
     resetButton.addEventListener('click', resetGame);
 }
 
 function resetGame() {
     guessCount = 1;
 
-    var resetParas = document.querySelectorAll('.resultParas p');
-    for (var i = 0; i < resetParas.length; i++) {
-        resetParas[i].textContent = '';
+    const resetParas = document.querySelectorAll('.resultParas p');
+    for (const resetPara of resetParas) {
+        resetPara.textContent = '';
     }
-
     resetButton.parentNode.removeChild(resetButton);
 
     guessField.disabled = false;
@@ -71,13 +72,6 @@ function resetGame() {
 
     lastResult.style.backgroundColor = 'white';
 
-    randomNumber = Math.floor(Math.random() * 100) + 1;
+    randomNumber = Math.floor(Math.random()*100) + 1;
+    console.log(randomNumber);
 }
-var name1 = 'Bingo';
-//console.log(name1);
-var hello = ' Says Hello';
-//console.log(hello);
-var gretting = name1 + hello;
-//console.log(gretting);
-name1 += hello;
-//console.log(name1);
