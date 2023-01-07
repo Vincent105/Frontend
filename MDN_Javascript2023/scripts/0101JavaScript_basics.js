@@ -70,3 +70,40 @@ myImage.onclick = function () {
         myImage.setAttribute('src', 'images/0101firefox-icon.png');
     }
 }
+
+/*添加客製化歡迎訊息
+ */
+var myButton = document.querySelector('button');
+var myHead = document.querySelector('h1');
+
+/*Ver1
+function setUserName() {
+    let myName = prompt('plz type your name:');
+    localStorage.setItem('name', myName);
+    myHead.innerHTML = 'Cool ' + myName;
+}
+*/
+
+//Ver2.修正Ver1未輸入時，顯示NUll問題。
+function setUserName() {
+    let myName = prompt('plz type your name:');
+    if (!myName || myName === null){
+        setUserName();
+    } else {
+        localStorage.setItem('name', myName);
+        myHead.innerHTML = 'Cool ' + myName;
+    }
+}
+
+if (!localStorage.getItem('name')) {
+    setUserName();
+} else {
+    let storgeName = localStorage.getItem('name');
+    myHead.innerHTML = 'Cool ' + storgeName;
+}
+
+//localStorage.clear();
+
+myButton.onclick = function (){
+    setUserName();
+}
