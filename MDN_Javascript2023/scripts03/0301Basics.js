@@ -1,9 +1,9 @@
 let person = {
     name: ['Bob', 'Smith'],
-    name2:{
-        first : 'Bob',
-        last : 'Smith'
-      },
+    name2: {
+        first: 'Bob',
+        last: 'Smith'
+    },
     age: 32,
     gender: 'male',
     interests: ['music', 'skiing'],
@@ -25,7 +25,35 @@ console.log(person.name2.last);
 console.log(person['age']);
 console.log(person['name2']['first']);
 
-//設定物件成員
+//更新物件成員
+person.age = 45
+console.log(person.age);
+person.name.last = 'Cratchit';
+console.log(person.name.last);
 
+//新增物件成員
+person.eye = 'test'
+console.log(person.eye);
+person.farewell = function () { alert("Bye everybody!") };
+
+let myDataName = 'height';
+let myDataValue = '1.75m';
+person[myDataName] = myDataValue;
+console.log(person[myDataName]);
+
+// 這個「this」是什麼？
+let person1 = {
+    name: 'Chris',
+    greeting: function () {
+        alert('Hi I\'m' + this.name);
+    }
+}
+
+let person2 = {
+    name: 'Vincent',
+    greeting: function (){
+        alert('Hi I\'m' + this.name);
+    }
+}
 
 setTimeout(() => { }, 1000)
