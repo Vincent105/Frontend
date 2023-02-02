@@ -60,3 +60,36 @@ const square2 = x => x * x;
 
 console.log(square1(2));
 console.log(square2(3));
+
+//The call stack
+function a() {
+    function b() {
+        function c() {
+            console.log('This is c()');
+        }
+        c();
+        console.log('This is b()');
+    }
+    b();
+    console.log('This is a()');
+}
+a();
+
+//Optional Arguments
+function square(x) {
+    return x * x;
+};
+
+console.log(square(x, true, "test"));    //ignored
+
+function power1(base, exponent = 2) {
+    let result = 1;
+    for (let count = 0; count < exponent; count++) {
+        result *= base;
+     }
+     return result;
+}
+console.log(power1(4));
+// → 16
+console.log(power1(2, 6));
+// → 64
